@@ -1,1 +1,2 @@
-Lesson about HTML and CSS
+Lesson 1
+Introduction of HTML and CSS
