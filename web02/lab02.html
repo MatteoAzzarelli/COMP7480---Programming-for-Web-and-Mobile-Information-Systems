@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab #2</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .class3 {
+            background-color: lightsalmon
+        }
+    </style>
+</head>
+
+<body onload="pageLoaded()">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                    <a class="nav-item nav-link" href="#div05">Features</a>
+                    <a class="nav-item nav-link" href="#">Pricing</a>
+                    <a class="nav-item nav-link disabled" href="#">Disabled</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Fluid jumbotron</h1>
+                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="div01" class="card col-12 col-sm-6 col-lg-4 col-xl-3">
+                <button class="btn btn-primary" type="button" onclick="btn1Clicked(this)">I'm Button 1, Click me!</button>
+            </div>
+            <div id="div02" class="card col-12 col-sm-6 col-lg-4 col-xl-3">
+                <button class="btn btn-secondary" type="button" onclick="btn2Clicked(this)">I'm Button 2, Click me!</button>
+            </div>
+            <div id="div03" class="card col-12 col-sm-6 col-lg-4 col-xl-3">
+                <button class="btn btn-info" type="button" onclick="btn3Clicked(this)">I'm Button 3, Click me!</button>
+            </div>
+            <div id="div04" class="card col-12 col-sm-6 col-lg-4 col-xl-3">
+                <img class="img-fluid img-thumbnail" src="http://via.placeholder.com/350x150/dec.png" />
+            </div>
+            <div id="div05" class="card col-12 col-sm-6 col-lg-4 col-xl-3"></div>
+            <div id="div06" class="card col-12 col-sm-6 col-lg-4 col-xl-3"></div>
+            <div id="div07" class="card col-12 col-sm-6 col-lg-4 col-xl-3"></div>
+            <div id="div08" class="card col-12 col-sm-6 col-lg-4 col-xl-3"></div>
+            <div id="div09" class="card col-12 col-sm-6 col-lg-4 col-xl-3"></div>
+            <div id="div10" class="card col-12 col-sm-6 col-lg-4 col-xl-3"></div>
+            <div id="div11" class="card col-12 col-sm-6 col-lg-4 col-xl-3"></div>
+            <div id="div12" class="card col-12 col-sm-6 col-lg-4 col-xl-3"></div>
+
+        </div>
+    </div>
+    <div style="height: 300px;"></div>
+</body>
+
+<script>
+    function btn1Clicked(elem) {
+        console.log("console output");
+        elem.innerHTML = "Don't click me!";
+    };
+
+    function btn2Clicked(elem) {
+        // elem.style = "display:none";
+        elem.parentNode.innerHTML = "It's gone";
+    };
+
+    function btn3Clicked(elem) {
+        elem.parentNode.className += " class3";
+    };
+
+    function pageLoaded() {
+        runDiv5();
+        runDiv6();
+        runDiv7();
+        runDiv8();
+        runDiv9();
+        runDiv10();
+        runDiv11();
+        runDiv12();
+    }
+
+    function runDiv5() {
+        if (Math.random() > 0.5) {
+            document.getElementById("div05").innerHTML = "Upper";
+        } else {
+            document.getElementById("div05").innerHTML = "Lower";
+        }
+    }
+
+    function runDiv6() {
+        for (i = 0; i < 10; i = i + 1) {
+            document.getElementById("div06").innerHTML += i + " ";
+        }
+    }
+
+    function runDiv7() {
+        var booleanVariable = true;
+        var numericVariable = 12;
+        var stringVariable = "Twelve";
+
+        document.getElementById("div07").innerHTML = booleanVariable + " " + numericVariable + " " + stringVariable + "<br>";
+        document.getElementById("div07").innerHTML += typeof booleanVariable + " " + typeof numericVariable + " " + typeof stringVariable;
+    }
+
+    function runDiv8() {
+        var declaredAndAssigned = "Some value";
+        var declaredButNotAssigned;
+
+        document.getElementById("div08").innerHTML = typeof declaredAndAssigned + " " + typeof declaredButNotAssigned + " " + typeof notYetDeclared;
+        // the last two will give "undefined" as its type.
+        // if (notYetDeclared == 1) console.log("Reference Error");
+
+        if (typeof notYetDeclared !== "undefined") {
+            if (notYetDeclared == 1) console.log("Reference Error");
+        }
+    }
+
+    function runDiv9() {
+        //Object
+        var sukiyaki = { beef: "2 lb", eggs: 4, crucial: "pot" };
+        // var string = typeof sukiyaki + "<br>";
+
+        // for (var key in sukiyaki) {
+        //     string += key + ": " + sukiyaki[key] + "<br>";
+        // }
+        // sukiyaki[key] are the values.
+
+        var string = typeof sukiyaki + "<br><table class='table table-striped table-hover table-bordered'>";
+
+        //NOTE: for...in
+        for (var key in sukiyaki) {
+            string += "<tr><td>" + key + "</td><td>" + sukiyaki[key] + "</td></tr>";
+        }
+
+        string += "</table>"
+        document.getElementById("div09").innerHTML = string;
+    }
+
+    function runDiv10() {
+        //Array
+        var sukiyakiParticipants = ["Martin", "Kenny", "Jarvis"];
+
+        // var string = typeof (sukiyakiParticipants) + "<br>"; // Object
+
+        // for (var person of sukiyakiParticipants) {
+        //     string += person + "<br>";
+        // }
+
+        var string = typeof (sukiyakiParticipants) + "<br><ul class='list-group'>";
+
+        //NOTE: for...of
+        for (var person of sukiyakiParticipants) {
+            string += "<li class='list-group-item'>" + person + "</li>";
+        }
+
+        string += "</ul>"
+
+        document.getElementById("div10").innerHTML = string;
+    }
+
+    function runDiv11() {
+        var sukiyakiParticipants = ["Martin", "Kenny", "Jarvis"];
+
+        //inner function
+        function shorterThan6(value) {
+            return value.length < 6;    // counting the number of characters
+        }
+
+        //NOTE: filter is a function that return an Array filtered by the passed function
+        var returnArray = sukiyakiParticipants.filter(shorterThan6);
+
+        document.getElementById("div11").innerHTML = returnArray[0];
+    }
+
+
+    function runDiv12() {
+        var str = "How are you doing today?";
+        var res = str.split(" "); // Split str string using " " as splitter point
+        document.getElementById("div12").innerHTML = res[3]; // doing
+    }
+
+</script>
+
+</html>
