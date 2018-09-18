@@ -1,0 +1,44 @@
+th{
+    width: 50px;
+    background-color:   #96AEB5;
+}
+
+td{
+    height: 10px;
+    
+    border-style: dashed;
+    border-width: thin;
+    border-color: #a0a0a0;
+
+    text-align: right;
+    vertical-align: top;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+caption{
+    color: #cc00cc;
+    text-transform: uppercase;
+
+    font-family: Arial;
+    font-weight: 900;
+}
+
+.sundays{
+    color: #aa0000;
+}
+
+#bookmark{
+    text-align: center;
+}
+
+#img1{
+    float: right;
+}
+
+#span1{
+   display: block;
+   clear: both; 
+}
