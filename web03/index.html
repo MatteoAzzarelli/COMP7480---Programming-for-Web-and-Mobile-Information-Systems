@@ -7,32 +7,32 @@
 </head>
 
 <body>
-    <form>
+    <form action="https://www.httpbin.org/post" method="POST">
         <fieldset>
             <legend>Booking Details</legend>
             <div>
                 <label for="name">Name:</label>
-                <input type="text" id="name">
+                <input type="text" id="name" name="name">
             </div>
             <div>
                 <label for="email">Email:</label>
-                <input type="text" id="email">
+                <input type="text" id="email" name="email">
             </div>
             <div>
                 <label for="numTickets">No. of Tickets:</label>
-                <input type="text" id="numTickets">
+                <input type="text" id="numTickets" name="numTickets">
             </div>
             <div>
                 <span>Gender:</span>
                 <br>
                 <span>
-                    <input type="radio" value="Male">Male
-                    <input type="radio" value="Female">Female
+                    <input name="gender" type="radio" value="Male">Male
+                    <input name="gender" type="radio" value="Female">Female
                 </span>
             </div>
             <div>
                 <span>Select your favourite team:</span>
-                <select onchange="teamSelected(this.value)">
+                <select name="team" onchange="teamSelected(this.value)">
                     <option value="nan">Please select a team:</option>
                     <option value="Avengers">Avengers</option>
                     <option value="JLA">Justice League</option>
@@ -41,8 +41,13 @@
 
             <div>
                 <span>Select your favourite hero:</span>
-                <select id="hero" disabled>
+                <select name="hero" id="hero" disabled>
                 </select>
+            </div>
+
+            <div>
+                <span>Remarks:</span><br>
+                <textarea name="remarks" cols=50 rows=12></textarea>
             </div>
             <!-- More form elements -->
 
